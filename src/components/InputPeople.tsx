@@ -8,7 +8,7 @@ export default function InputPeople({getPeople}) {
         id="people" 
         placeholder="1"
         onChange={(e)=> getPeople(parseInt(e.target.value))} 
-        className="appearance-none outline-none bg-Very-light-grayish-cyan rounded-sm p-1 text-Very-dark-cyan placeholder:text-left text-right input-people"/>
+        className="appearance-none outline-none bg-Very-light-grayish-cyan rounded-sm p-1 text-Very-dark-cyan placeholder:text-left text-right input-people focus:outline-Strong-cyan"/>
        
     
     </div>

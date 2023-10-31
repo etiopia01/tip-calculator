@@ -5,6 +5,7 @@ import InputBill from './components/InputBill'
 import InputTip from './components/InputTip'
 import InputPeople from './components/InputPeople'
 import Output from './components/Output'
+import CustomTip from './components/CustomTip'
 
 function App() {
   const [bill, setBill] = useState(0)
@@ -44,6 +45,7 @@ const reset = ()=> {
             <InputTip value={15} getTip={getTip}/>
             <InputTip value={25} getTip={getTip}/>
             <InputTip value={50} getTip={getTip}/>
+            <CustomTip getTip={getTip}/>
             
         </div>
     </div>
