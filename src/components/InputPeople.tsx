@@ -1,4 +1,4 @@
-export default function InputPeople({getPeople}) {
+export default function InputPeople({getPeople,people}:{getPeople:(val:number)=> void, people:number}) {
     return (
     <div className="flex flex-col gap-2 ">
         
@@ -6,9 +6,10 @@ export default function InputPeople({getPeople}) {
         <input type="number" 
         name="people" 
         id="people" 
+        value={people > 1? people : ""}
         placeholder="1"
         onChange={(e)=> getPeople(parseInt(e.target.value))} 
-        className="appearance-none outline-none bg-Very-light-grayish-cyan rounded-sm p-1 text-Very-dark-cyan placeholder:text-left text-right input-people focus:outline-Strong-cyan"/>
+        className="appearance-none outline-none bg-Very-light-grayish-cyan rounded-sm p-1 whitespace-nowrap text-Very-dark-cyan placeholder:text-left text-right input-people focus:outline-Strong-cyan"/>
        
     
     </div>

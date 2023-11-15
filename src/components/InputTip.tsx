@@ -1,19 +1,20 @@
-import { useState } from "react"
+import { signal } from "@preact/signals-react";
 
-export default function InputTip({ value, getTip }: { value: number; getTip: (value: number) => void }) {
-    const [active, setActive] = useState(false)
+export const selection = signal(0)
+
+export default function InputTip({ value, getTip }: { value: number; getTip: (value: number) => void}) {
+    
 
     const handleClick =()=> {
-        setActive(!active)
+        selection.value = value
         getTip(value)
     }
-    const buttonClass = active? "active-button" : "inactive-button"
+    const buttonClass = selection.value === value? "active-button" : "inactive-button"
 
     return (
         
         <button className={`bg-Very-dark-cyan h-10 w-20 rounded-lg text-white hover:bg-Light-grayish-cyan hover:text-Very-dark-cyan ${buttonClass}`}
         onClick={handleClick}
-        onBlur={()=> {setActive(false)}}
         >{value}%
         </button>
         

@@ -6,6 +6,7 @@ import InputTip from './components/InputTip'
 import InputPeople from './components/InputPeople'
 import Output from './components/Output'
 import CustomTip from './components/CustomTip'
+import Tips from './components/Tips'
 
 function App() {
   const [bill, setBill] = useState(0)
@@ -34,22 +35,14 @@ const reset = ()=> {
     <h1>SPLI</h1>
     <h1>TTER</h1>
     </div>
-    <div className="bg-white w-[700px] h-auto rounded-2xl p-6 flex gap-10">
+    <div className="bg-white w-[700px] h-[350px] rounded-2xl p-6 flex gap-10">
       <div className='w-[50%] h-full p-3 flex flex-col gap-6 justify-between'>
-        <InputBill getBill={getBill}/>
+        <InputBill getBill={getBill} bill={bill}/>
         <div>
         <p className="text-Dark-grayish-cyan text-xs">Select tip %</p>
-        <div className='flex flex-wrap gap-4 mt-2'>
-            <InputTip value={5} getTip={getTip}/>
-            <InputTip value={10} getTip={getTip}/>
-            <InputTip value={15} getTip={getTip}/>
-            <InputTip value={25} getTip={getTip}/>
-            <InputTip value={50} getTip={getTip}/>
-            <CustomTip getTip={getTip}/>
-            
-        </div>
+       <Tips getTip={getTip}/>
     </div>
-    <InputPeople getPeople={getPeople}/>
+    <InputPeople getPeople={getPeople} people={people}/>
       </div>
       <Output people={people} tip={tip} bill={bill} reset={reset}/>
     </div>
