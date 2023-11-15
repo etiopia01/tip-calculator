@@ -1,11 +1,8 @@
 import { useState } from 'react'
-
 import './App.css'
 import InputBill from './components/InputBill'
-import InputTip from './components/InputTip'
 import InputPeople from './components/InputPeople'
 import Output from './components/Output'
-import CustomTip from './components/CustomTip'
 import Tips from './components/Tips'
 
 function App() {
@@ -30,13 +27,13 @@ const reset = ()=> {
 }
 
   return (
-    <>
+    <div className='p-20 flex flex-col items-center gap-6 h-[100vh]'>
     <div className="text-Dark-grayish-cyan tracking-[0.5em] text-lg">
     <h1>SPLI</h1>
     <h1>TTER</h1>
     </div>
-    <div className="bg-white w-[700px] h-[350px] rounded-2xl p-6 flex gap-10">
-      <div className='w-[50%] h-full p-3 flex flex-col gap-6 justify-between'>
+    <div className="bg-white w-full h-[600px] lg:flex-row lg:w-[700px] lg:h-[350px] rounded-2xl p-6 flex flex-col gap-10">
+      <div className='w-full h-[50%] lg:h-full lg:w-[50%]  p-3 flex flex-col gap-6 justify-between'>
         <InputBill getBill={getBill} bill={bill}/>
         <div>
         <p className="text-Dark-grayish-cyan text-xs">Select tip %</p>
@@ -46,7 +43,7 @@ const reset = ()=> {
       </div>
       <Output people={people} tip={tip} bill={bill} reset={reset}/>
     </div>
-    </>
+    </div>
   )
 }
 

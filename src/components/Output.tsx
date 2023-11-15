@@ -1,6 +1,6 @@
 export default function Output({people, tip, bill, reset} : {people:number|undefined; tip:number|undefined; bill:number|undefined; reset:()=> void}) {
     return (
-        <div className="bg-Very-dark-cyan h-full w-[50%] max-w-[300px] rounded-xl flex flex-col justify-start gap-6 p-6">
+        <div className="bg-Very-dark-cyan h-[50%] lg:h-full lg:w-[50%] lg:max-w-[300px] w-full rounded-xl flex flex-col justify-start gap-6 p-6">
 <div className="flex justify-between mt-6">
     <div>
         <p className="text-white text-sm">Tip Amount</p>

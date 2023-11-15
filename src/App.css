@@ -1,11 +1,19 @@
 #root {
-    height: 100vh;
+    height: 200vh;
     background-color: hsl(185, 41%, 84%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 50px;
+}
+@media screen and (min-width: 1024px) {
+    #root {
+        height: 100vh;
+        justify-content: center;
+        padding-top: 100px;
+    }
+    
 }
 * {
     box-sizing: border-box;
